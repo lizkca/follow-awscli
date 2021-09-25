@@ -1,7 +1,13 @@
+import click
+
+@click.command()
+@click.option('--name')
 def marco(name):
     if name == 'Marco':
-        return 'Polo'
-    return 'No Match'
+        click.echo('Polo')
+    else:
+        click.echo('No Match')
 
-print(marco('Marco'))
-print(marco('Bob'))
+if __name__ == '__main__':
+    #pylint: disable=no-value-for-parameter
+    marco()
